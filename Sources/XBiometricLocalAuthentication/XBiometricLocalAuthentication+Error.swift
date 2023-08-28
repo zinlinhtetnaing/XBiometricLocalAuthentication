@@ -69,7 +69,7 @@ public enum AuthenticationError: LocalizedError {
         }
     }
     
-    var errorDescription: String {
+    public var errorDescription: String {
         let isFaceIdDevice = XBiometricLocalAuthentication.shared.isFaceIdDevice
         switch self {
         case .authenticationFailed:
