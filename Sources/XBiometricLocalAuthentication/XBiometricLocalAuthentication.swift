@@ -1,10 +1,10 @@
 import Foundation
 import LocalAuthentication
 
-class BioMetricAuthenticator: NSObject {
+public class XBiometricLocalAuthentication: NSObject {
     
     // MARK: - Singleton
-    public static let shared = BioMetricAuthenticator()
+    public static let shared = XBiometricLocalAuthentication()
     
     // MARK: - Private
     private override init() {}

@@ -35,7 +35,7 @@ let noFaceIdentityEnrolled = "There is no face enrolled in the device. Please go
 let defaultFaceIDAuthenticationFailedReason = "Face ID does not recognize your face. Please try again with your enrolled face."
 
 
-enum AuthenticationError: LocalizedError {
+public enum AuthenticationError: LocalizedError {
     case authenticationFailed
     case canceledByUser
     case fallback
@@ -70,7 +70,7 @@ enum AuthenticationError: LocalizedError {
     }
     
     var errorDescription: String {
-        let isFaceIdDevice = BioMetricAuthenticator.shared.isFaceIdDevice
+        let isFaceIdDevice = XBiometricLocalAuthentication.shared.isFaceIdDevice
         switch self {
         case .authenticationFailed:
             return authenticationFail
